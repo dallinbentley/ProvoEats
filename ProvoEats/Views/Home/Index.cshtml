@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Welcome To Provo Eats";
+}
+
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+    <h3>Check out the top eats in Provo!</h3>
+
+    @foreach (string eat in Model)
+    {
+        <p>@eat</p>
+    }
+</div>

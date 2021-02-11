@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Submissions";
+}
+
+@model IEnumerable<ProvoEats.Models.UserSubmission>
+
+<div>
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone</th></tr>
+        </thead>
+        <tbody>
+            @foreach (ProvoEats.Models.UserSubmission x in Model)
+            {
+                <tr>
+                    <td>@x.Name</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.FavoriteDish</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
